@@ -7,15 +7,25 @@ LDFLAGS=
 
 LIBOBJECTS = -lpthread -lgtest
 
+SRC = unit_all.cpp ./utility/bfilter.cpp
+
+OBJ = $(SRC:.cpp=.o)
+
 PROGRAMS = unit_all
 
 
+
+
+
 all: $(PROGRAMS)
-	./$(PROGRAMS) 1>unit_all.log 2>unit_all.err &
+
 clean:
 	rm -f $(PROGRAMS)
 
-unit_all: 
-	$(CC) $(CFLAGS) -o $@ $@.cpp $(LIBOBJECTS) $(LDFLAGS)
+$(PROGRAMS):$(OBJ)
+	g++ -o $@ $(OBJ) $(LIBOBJECTS) $(LDFLAGS)
+
+bfilter.o: ../utility/bfilter.h	../utility/bfilter.cpp
+	g++ -c -g bfilter.cpp
 
 
