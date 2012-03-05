@@ -1,0 +1,17 @@
+############################################################################
+#THUIRDB V02 README
+############################################################################
+
+1)how to try thuirdb?
+   go to dir [test_code],run [sh help.sh] to test basic functions.
+   go to dir [test_code],run [sh help_concurrent_query.sh] to test concurrent_query, however,make sure run help.sh first.
+  
+2)how to use function in thuirdb.h
+  1 to see the code in ./test_code/test_thuirdb.cpp carefully, then you will know how to use them.
+  2 to see the description of thuirdb.h
+
+3)some other questions?
+  pls send an email to me(thuirdb@thuir.org or thuirdb@gmail.com)
+
+
+
